@@ -1,0 +1,1 @@
+exports.IS_TRANSCRIBE_FULL_BLOB = true;
