@@ -17,7 +17,7 @@
 ### 3) Open Source
 - Own control of your data and use an AI service you trust. 
 
-# Uscases
+# Use cases
 - Wear your smartphone on your chest. The app takes pictures every 5 seconds. At the end of the day, you can ask the assistant questions, like what was the name of the guy you met, or the phone number that was written on the front of the building.
 - Walkie-Tolkie Voices Recorder - ramble your thoughts while driving, or on the go and get your text polished with AI.
 
