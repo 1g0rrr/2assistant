@@ -19,6 +19,8 @@
 
 # Use cases
 - Wear your smartphone on your chest. The app takes pictures every 5 seconds. At the end of the day, you can ask the assistant questions, like what was the name of the guy you met, or the phone number that was written on the front of the building.
+<img width="603" alt="Screenshot 2024-05-29 at 16 06 49" src="https://github.com/1g0rrr/2assistant/assets/51457/bc858b59-9bdc-4482-ae5e-4b46ab863f94">
+
 - Walkie-Tolkie Voices Recorder - ramble your thoughts while driving, or on the go and get your text polished with AI.
 
 # License
