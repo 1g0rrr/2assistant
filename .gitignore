@@ -11,6 +11,7 @@ lerna-debug.log*
 .firebaserc
 _del/
 .env
+android/
 
 node_modules
 dist

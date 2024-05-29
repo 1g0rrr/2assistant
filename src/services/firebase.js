@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { connectFirestoreEmulator, getFirestore } from "firebase/firestore";
-import { connectFunctionsEmulator, getFunctions } from "firebase/functions";
+import { getFirestore } from "firebase/firestore";
+import { getFunctions } from "firebase/functions";
 import { getStorage } from "firebase/storage";
 
 import { initializeApp } from "firebase/app";
@@ -23,10 +23,10 @@ const storage = getStorage(app);
 const functions = getFunctions();
 const firebaseAuthInstance = getAuth();
 
-if (import.meta.env.DEV) {
-    connectFunctionsEmulator(functions, "localhost", 5001);
-    connectFirestoreEmulator(db, "localhost", 8080);
-}
+// if (import.meta.env.DEV) {
+//     connectFunctionsEmulator(functions, "localhost", 5001);
+//     connectFirestoreEmulator(db, "localhost", 8080);
+// }
 
 export { app, db, firebaseAuthInstance, functions, storage };
 

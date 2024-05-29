@@ -6,7 +6,7 @@ const { languages } = require("./languages.js");
 const { initializeApp } = require("firebase-admin/app");
 initializeApp()
 
-const { llmPredict, transcribeFile } = require("./llm-helpers.js");
+const { llmPredict, transcribeFile, llmImage } = require("./llm-helpers.js");
 const { IS_TRANSCRIBE_FULL_BLOB } = require("./CONSTANTS.js");
 
 async function addCategoryToShortNote(originalText, noteId, dateString, userId) {
@@ -116,6 +116,19 @@ async function addNoteText(noteText, recepientNote, currentDateString, userId) {
     }
     return { noteId };
 }
+
+exports.addphotocall = onCall({
+    timeoutSeconds: 60,
+}, async (req) => {
+    const userId = req.auth.uid
+    let promptText = req.data.promptText;
+    let photosUrls = req.data.photosUrls;
+    // console.log("base64String", base64String);
+    const resultText = await llmImage(promptText, photosUrls)
+    console.log("resultText", resultText)
+
+    return resultText
+});
 
 exports.addnotefromtextcall = onCall({
     timeoutSeconds: 60,

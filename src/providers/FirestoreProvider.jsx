@@ -121,10 +121,21 @@ const FirestoreProvider = ({ children }) => {
 
     }, [userProfile?.recepientNote, sessionUserId, userProfile?.settings?.outputLanguageXX])
 
+    const addPhotoCallback = useCallback(async function (promptText, photosUrls) {
+        const response = await httpsCallable(functions, 'addphotocall')({
+            promptText: promptText,
+            photosUrls: photosUrls,
+        });
+        console.log(response?.data)
+        return response?.data;
+
+    }, [])
+
     return (
         <FirestoreContext.Provider value={{
             addNoteFromTextCallback,
             setStatus,
+            addPhotoCallback,
             toProcessNotes,
             sessionUserId,
             isSendingToServer,

@@ -4,14 +4,14 @@ module.exports = {
         node: true,
     },
     parserOptions: {
-        "ecmaVersion": 2018,
+        // "ecmaVersion": 2018,
     },
     extends: [
         "eslint:recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings",
-        "plugin:import/typescript",
-        "google",
+        // "plugin:import/errors",
+        // "plugin:import/warnings",
+        // "plugin:import/typescript",
+        // "google",
         // "google",
     ],
     rules: {
